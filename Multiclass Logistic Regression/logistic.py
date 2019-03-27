@@ -1,10 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import numpy as np
 from sklearn.model_selection import train_test_split, KFold, cross_val_score, cross_val_predict
 from sklearn.linear_model import LogisticRegression
-from sklearn.preprocessing import StandardScaler, scale
-from sklearn import preprocessing
 from sklearn import metrics
 
 # import data
@@ -66,7 +63,6 @@ plt.show()
 
 # Accuracy for Y1
 confidenceY1 = fitForY1.score(X_test, Y1_test)
-print('This is the prediction accuracy for Y1', confidenceY1)
 plt.title('Actual Y1 vs. Y1_Predict', size=10)
 plt.scatter(Y1_test, y1_pred, color='c', marker='.')
 plt.xlabel('Actual Y1', size=10)
@@ -76,7 +72,6 @@ plt.show()
 
 # Accuracy for Y2
 confidenceY2 = fitForY2.score(X_test, Y1_test)
-print('This is the prediction accuracy for Y2', confidenceY2)
 plt.title('Actual Y2 vs. Y2_Predict', size=10)
 plt.scatter(Y2_test, y2_pred, color='c', marker='.')
 plt.xlabel('Actual Y2', size=10)
